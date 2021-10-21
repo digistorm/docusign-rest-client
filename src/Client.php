@@ -647,7 +647,7 @@ class Client
      * @param string $host
      * @return $this
      */
-    public function setHost($host): self
+    public function setHost($host)
     {
         // Set this to keep them in sync for debugging purposes
         $this->host = $host;
@@ -713,7 +713,7 @@ class Client
      *
      * @return $this
      */
-    public function authenticate(): self
+    public function authenticate()
     {
         if (!$this->authenticated || !isset($this->account_id)) {
             $accounts = $this->authentication->login();
